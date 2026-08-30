@@ -1,0 +1,54 @@
+# Publish spec for eval.dearauditor.ch/telemedicine-consultation.
+#
+# Authored prose only. Every number below is a {{fact}} placeholder that
+# `rig publish` resolves from pinned run artifacts — nothing is hand-typed.
+# The pack loader ignores this file, so editing it never changes the pack hash.
+
+slug: telemedicine-consultation
+title: Telemedicine consultation triage
+export_name: telemedicineConsultation
+report_title: Validation dossier — telemedicine consultation triage (consultation pack)
+
+summary: >-
+  An AI works through a remote consultation — complaint, history, attachments —
+  and proposes diagnosis, workup, and treatment. This pipeline grades three
+  Gemini generations against gold answers on original synthetic consultation
+  cases, and shows what an honest FAIL looks like.
+
+data_note: >-
+  Cases are {{pack.n_cases}} original, independently authored synthetic
+  consultations. Their design follows the published D.O.T.S. specification
+  (arXiv:2603.25821); no data from the Doctorina MedBench dataset is included.
+
+diffs:
+  gen25_to_35:
+    baseline: 1386dfaca37b6a83 # gemini-2.5-flash, gemini_compare_all battery
+    candidate: 1f613db2e28eafbb # gemini-3.5-flash, same pinned inputs
+  gen35_to_37:
+    baseline: 1f613db2e28eafbb
+    candidate: 5cd97b4b81faca6b # gemini-3.7-flash
+
+arc:
+  task: |
+    <p>In a telemedicine service, the first conversation often decides everything: what the patient is asked, what gets recorded, and whether the case is routed to a doctor now, later, or to self-care. Vendors increasingly put an AI on that first conversation.</p>
+    <p>The workflow under test: the model works through a consultation case — presenting complaint, patient history, attached investigations — and produces a clinical assessment with diagnosis, differentials, workup, and first-line treatment.</p>
+
+  risks: |
+    <ul>
+    <li><strong>Critical omissions</strong> — the one finding that should change the assessment gets summarized away, especially when part of the input is missing or degraded.</li>
+    <li><strong>Overconfident answers</strong> — a fluent, plausible assessment on a case where the safe move was escalation.</li>
+    <li><strong>Version-to-version drift</strong> — the same vendor's next model release handles the same conversation differently, and nobody measures it.</li>
+    </ul>
+
+  measurement: |
+    <p>Each case carries gold answers: the clinical facts an assessment must contain and the management that is defensible. A pinned AI judge scores every output against that rubric, under a perturbation grid that withholds or degrades parts of the input. Acceptance thresholds are <strong>pre-registered in the pack</strong> — the pass/fail line is fixed before any model runs, so a failure cannot be negotiated away after the fact.</p>
+    <p>Three Gemini generations were run side by side on the same pinned inputs, so the pipeline answers a concrete question: <strong>did the new model get better or worse on your cases?</strong></p>
+
+  findings: |
+    <p><strong>The rig failed this workflow — and that is the finding.</strong> On the contract battery's baseline condition (the intended, unperturbed inputs), {{run.8072d585d024ae22.sut}} missed critical findings in {{run.8072d585d024ae22.acceptance.critical_omission_rate.value|.1%}} of graded checks. The pre-registered limit is {{run.8072d585d024ae22.acceptance.critical_omission_rate.limit|.0%}}. Verdict: <strong>{{run.8072d585d024ae22.acceptance.critical_omission_rate.result}}</strong> — even though the same run's mean quality score, {{run.8072d585d024ae22.acceptance.mean_score.value|.2f}}, comfortably cleared its own threshold of {{run.8072d585d024ae22.acceptance.mean_score.limit|.2f}}. Across the full perturbation grid (inputs withheld or degraded), the critical omission rate rose to {{run.8072d585d024ae22.critical_omission_rate|.0%}}.</p>
+    <p>That combination is the whole story: a model can look good on average and still be unsafe at the edges. A validation pipeline that cannot say FAIL is marketing; this one just did.</p>
+    <p><strong>Model comparison:</strong> on the pinned head-to-head comparison battery, all three Gemini generations scored {{run.1386dfaca37b6a83.mean_score|.3f}} ({{run.1386dfaca37b6a83.sut}}), {{run.1f613db2e28eafbb.mean_score|.3f}} ({{run.1f613db2e28eafbb.sut}}), and {{run.5cd97b4b81faca6b.mean_score|.3f}} ({{run.5cd97b4b81faca6b.sut}}) — every acceptance gate PASSED, with a mean score delta of {{diff.gen25_to_35.delta|.2f}} and {{diff.gen35_to_37.delta|.2f}} across the two version steps.</p>
+
+  meaning: |
+    <p>Triage AI is exactly where "it seemed fine in the demo" is not a safety argument. This workflow looked flawless on the head-to-head comparison — and still crossed a pre-registered safety line on critical omissions, on clean inputs, with the miss rate rising further once inputs were degraded. A validation pipeline gives a telemedicine provider that answer as a standing capability: on which cases does it fail, under what conditions, and did the last update change that?</p>
+    <p>Because the case bank is synthetic and original, the whole pipeline — cases, rubric, judge prompts — can be published and inspected without touching patient data.</p>
