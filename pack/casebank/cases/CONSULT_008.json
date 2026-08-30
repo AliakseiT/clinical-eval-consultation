@@ -1,0 +1,54 @@
+{
+  "case_id": "CONSULT_008",
+  "elements": {
+    "initial_presentation": "36-year-old female presents with a 9-month history of chronic bloating, watery diarrhea, 6 kg unintentional weight loss, and severe fatigue. Vitals: Temp 36.8 C, HR 76 bpm, BP 112/70 mmHg, BMI 18.2 kg/m2. Physical exam: diffuse mild abdominal distension without guarding, pale conjunctivae.",
+    "patient_history": "History of Hashimoto thyroiditis on Levothyroxine. Reports symptoms worsen with bread and pasta consumption. NKDA.",
+    "investigation_attachments": "Labs: Hemoglobin 9.4 g/dL (microcytic anemia, MCV 72 fL), Ferritin 8 ng/mL. Serology: Anti-tissue transglutaminase (anti-tTG) IgA >100 U/mL (strongly positive), Total IgA normal. Endoscopy/Biopsy: Duodenal biopsy shows subtotal villous atrophy, crypt hyperplasia, and increased intraepithelial lymphocytes (Marsh 3c)."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Celiac Disease",
+        "Coeliac disease",
+        "Gluten-sensitive enteropathy"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Irritable bowel syndrome",
+        "Crohn disease",
+        "Inflammatory bowel disease",
+        "Small intestinal bacterial overgrowth",
+        "Lactose intolerance"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Anti-tTG IgA serology",
+        "total serum IgA",
+        "esophagogastroduodenoscopy with duodenal biopsy",
+        "iron studies and vitamin levels"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Strict gluten-free diet",
+        "Dietary counseling with dietitian",
+        "Iron and micronutrient supplementation",
+        "Bone mineral density screening"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Malabsorption complications",
+        "osteopenia/osteoporosis",
+        "refractory celiac disease screening"
+      ],
+      "expected": true
+    }
+  }
+}

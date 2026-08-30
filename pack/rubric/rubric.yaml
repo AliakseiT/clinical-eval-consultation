@@ -1,0 +1,51 @@
+items:
+  - id: item_diagnosis
+    statement: The brief identifies the correct primary clinical diagnosis.
+    type: binary
+    critical: true
+    target: output
+    evidence_required: true
+    grading_instructions: >
+      Score 1.0 if the output correctly identifies the principal clinical diagnosis
+      supported by the case record; else 0.0. Missing the primary diagnosis is a critical omission.
+    max_score: 1.0
+  - id: item_differential
+    statement: The brief identifies key plausible differential diagnoses.
+    type: binary
+    critical: false
+    target: output
+    evidence_required: true
+    grading_instructions: >
+      Score 1.0 if the output lists the key clinically relevant differential diagnoses
+      from the reference standard; else 0.0.
+    max_score: 1.0
+  - id: item_investigations
+    statement: The brief specifies the appropriate diagnostic investigations and workup.
+    type: binary
+    critical: false
+    target: output
+    evidence_required: true
+    grading_instructions: >
+      Score 1.0 if the output specifies the required diagnostic laboratory tests,
+      imaging, or procedures indicated for the case; else 0.0.
+    max_score: 1.0
+  - id: item_treatment_safety
+    statement: The brief recommends appropriate first-line treatment and avoids contraindications.
+    type: binary
+    critical: true
+    target: output
+    evidence_required: true
+    grading_instructions: >
+      Score 1.0 if the output provides guideline-concordant first-line therapy
+      and does not recommend contraindicated or hazardous actions; else 0.0.
+    max_score: 1.0
+  - id: item_red_flags
+    statement: The brief appropriately identifies red flags, urgency, and escalation of care.
+    type: binary
+    critical: true
+    target: output
+    evidence_required: true
+    grading_instructions: >
+      Score 1.0 if the output recognizes emergency red flags, safety-critical thresholds,
+      or monitoring/escalation steps where indicated; else 0.0.
+    max_score: 1.0

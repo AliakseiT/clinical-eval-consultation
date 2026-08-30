@@ -1,0 +1,59 @@
+{
+  "case_id": "CONSULT_006",
+  "elements": {
+    "initial_presentation": "45-year-old female presents with sudden onset sharp right-sided pleuritic chest pain and breathlessness for 3 hours. Returned from a 12-hour international flight 2 days ago. Vitals: Temp 37.4 C, HR 114 bpm (sinus tachycardia), BP 124/78 mmHg, RR 24/min, SpO2 92% on room air. Right calf is mildly swollen and tender on palpation.",
+    "patient_history": "Uses oral combined contraceptive pills for 5 years. No prior DVT/PE history. Non-smoker. NKDA.",
+    "investigation_attachments": "ECG: Sinus tachycardia at 116 bpm, S1Q3T3 pattern. D-Dimer: 3200 ng/mL (elevated). CT Pulmonary Angiogram (CTPA): Filling defect in right main and interlobar pulmonary artery consistent with acute pulmonary embolism."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Pulmonary Embolism",
+        "PE",
+        "Acute pulmonary thromboembolism",
+        "Deep vein thrombosis"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Acute coronary syndrome",
+        "Aortic dissection",
+        "Pneumothorax",
+        "Pneumonia",
+        "Pleurisy"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "CT pulmonary angiography",
+        "D-dimer",
+        "lower extremity venous duplex ultrasound",
+        "echocardiogram",
+        "troponin and BNP"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Therapeutic anticoagulation",
+        "Low molecular weight heparin",
+        "DOAC",
+        "Apixaban",
+        "Rivaroxaban",
+        "Discontinue oral contraceptive pills"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Hemodynamic instability",
+        "right ventricular strain",
+        "massive PE / thrombolysis criteria",
+        "PESI stratification"
+      ],
+      "expected": true
+    }
+  }
+}

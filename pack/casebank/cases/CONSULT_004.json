@@ -1,0 +1,56 @@
+{
+  "case_id": "CONSULT_004",
+  "elements": {
+    "initial_presentation": "19-year-old female presents with 2 days of progressive fatigue, polyuria, polydipsia, abdominal pain, nausea, and vomiting. Breathing is rapid and deep (Kussmaul breathing) with fruity breath odor. Vitals: Temp 37.2 C, HR 122 bpm, BP 98/62 mmHg, RR 28/min, SpO2 98%. Lethargic but oriented.",
+    "patient_history": "Diagnosed with Type 1 Diabetes Mellitus 4 years ago. On basal-bolus insulin (Glargine + Lispro). Missed several insulin doses over the last 3 days due to stomach upset. NKDA.",
+    "investigation_attachments": "Point-of-care Blood Glucose: 480 mg/dL. VBG/ABG: pH 7.18, HCO3 10 mEq/L, pCO2 24 mmHg, Anion Gap 24 (high anion gap metabolic acidosis). Urinalysis: 4+ glucose, 4+ ketones. Serum beta-hydroxybutyrate: 5.8 mmol/L. Potassium: 4.8 mEq/L."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Diabetic Ketoacidosis",
+        "DKA"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Hyperosmolar Hyperglycemic State",
+        "Alcoholic ketoacidosis",
+        "Starvation ketosis",
+        "Acute gastroenteritis",
+        "Sepsis"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Basic metabolic panel",
+        "serum electrolytes",
+        "serial venous blood gases",
+        "potassium monitoring",
+        "urinary ketones"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "IV fluid resuscitation",
+        "Isotonic saline",
+        "IV regular insulin infusion",
+        "Potassium repletion",
+        "close glucose monitoring"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Avoid giving insulin before checking potassium",
+        "hypokalemia risk",
+        "cerebral edema monitoring",
+        "ICU or step-down admission"
+      ],
+      "expected": true
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "CONSULT_007",
+  "elements": {
+    "initial_presentation": "31-year-old female presents with 2 days of high fever, rigors, right-sided flank pain, nausea, and burning on urination (dysuria) with urinary frequency. Vitals: Temp 39.2 C, HR 112 bpm, BP 102/64 mmHg, RR 20/min. Physical exam: marked right costovertebral angle (CVA) tenderness.",
+    "patient_history": "Recurrent uncomplicated UTIs in the past. Currently not pregnant. NKDA.",
+    "investigation_attachments": "Urinalysis: Turbid, positive leukocyte esterase, positive nitrites, >50 WBC/HPF, moderate bacteria. Labs: WBC 17.2 x10^9/L, Lactate 1.8 mmol/L. Renal Ultrasound: Mild right renal enlargement without hydronephrosis or perinephric abscess."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Acute pyelonephritis",
+        "pyelonephritis",
+        "complicated urinary tract infection"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Uncomplicated cystitis",
+        "Nephrolithiasis",
+        "Appendicitis",
+        "Pelvic inflammatory disease",
+        "Renal abscess"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Urine culture and sensitivity",
+        "blood cultures",
+        "complete blood count",
+        "renal ultrasound",
+        "serum creatinine"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Empiric IV antibiotics",
+        "Ceftriaxone",
+        "Fluoroquinolone / Ciprofloxacin if susceptible",
+        "IV hydration",
+        "Antipyretics"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Urosepsis monitoring",
+        "obstruction / perinephric abscess rule-out",
+        "vital sign stability"
+      ],
+      "expected": true
+    }
+  }
+}

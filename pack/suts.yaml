@@ -1,0 +1,49 @@
+suts:
+  - id: fake-baseline
+    kind: llm_call
+    binding:
+      model_id: fake
+      model_version: "1"
+      system_prompt: &sys >
+        You are a clinical AI consultant evaluating a medical consultation.
+        State the primary diagnosis, plausible differential diagnoses,
+        recommended diagnostic investigations, guideline-concordant treatment,
+        and any emergency escalation or safety precautions. Be concise and precise.
+      params:
+        temperature: 0
+
+  - id: gemini-2.5-flash
+    kind: llm_call
+    binding:
+      model_id: gemini-2.5-flash
+      model_version: "2.5-flash"
+      endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+      api_key_env: GEMINI_API_KEY
+      system_prompt: *sys
+      params:
+        temperature: 0
+        max_tokens: 2048
+
+  - id: gemini-3.5-flash
+    kind: llm_call
+    binding:
+      model_id: gemini-3.5-flash
+      model_version: "3.5-flash"
+      endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+      api_key_env: GEMINI_API_KEY
+      system_prompt: *sys
+      params:
+        temperature: 0
+        max_tokens: 2048
+
+  - id: gemini-3.7-flash
+    kind: llm_call
+    binding:
+      model_id: gemini-3.7-flash
+      model_version: "3.7-flash"
+      endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+      api_key_env: GEMINI_API_KEY
+      system_prompt: *sys
+      params:
+        temperature: 0
+        max_tokens: 2048

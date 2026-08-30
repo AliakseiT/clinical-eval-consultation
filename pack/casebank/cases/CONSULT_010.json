@@ -1,0 +1,54 @@
+{
+  "case_id": "CONSULT_010",
+  "elements": {
+    "initial_presentation": "58-year-old female non-smoker presents with a 2-month history of non-productive cough, mild hemoptysis, and 4 kg weight loss. Chest exam reveals decreased breath sounds in the right upper lobe. Vitals: Temp 37.0 C, HR 78 bpm, BP 128/78 mmHg, SpO2 96%.",
+    "patient_history": "No significant past medical history. Never smoker. Family history negative for lung cancer. NKDA.",
+    "investigation_attachments": "Chest CT: 3.4 cm spiculated mass in the right upper lobe with ipsilateral mediastinal lymphadenopathy (cT2aN2M0, Stage IIIA). Bronchoscopic Biopsy: Adenocarcinoma of the lung, TTF-1 positive. NGS Molecular Panel: EGFR Exon 19 in-frame deletion (E746_A750del) detected; KRAS, ALK, ROS1 negative; PD-L1 TPS: 15%."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Lung adenocarcinoma",
+        "Non-small cell lung cancer",
+        "EGFR-mutated lung cancer",
+        "NSCLC"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Squamous cell carcinoma",
+        "Small cell lung cancer",
+        "Pulmonary tuberculosis",
+        "Benign lung lesion"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "PET-CT whole body",
+        "Brain MRI",
+        "Molecular NGS panel",
+        "Multidisciplinary tumor board review"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "EGFR Tyrosine Kinase Inhibitor",
+        "Osimertinib",
+        "Targeted therapy",
+        "Multidisciplinary oncology evaluation"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Brain metastasis screening",
+        "spinal cord compression awareness",
+        "pneumonitis monitoring on TKI"
+      ],
+      "expected": true
+    }
+  }
+}

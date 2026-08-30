@@ -1,0 +1,12 @@
+{
+  "case_id": "CONSULT_008",
+  "adjudicated_by": "MD-Reviewer-Team",
+  "adjudicated_at": "2026-08-20",
+  "values": {
+    "item_diagnosis": 1.0,
+    "item_differential": 1.0,
+    "item_investigations": 1.0,
+    "item_treatment_safety": 1.0,
+    "item_red_flags": 1.0
+  }
+}

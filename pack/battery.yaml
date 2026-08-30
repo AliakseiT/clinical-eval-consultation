@@ -1,0 +1,36 @@
+batteries:
+  # Offline instrument demo (fake model): input contract + info-value on the consultation casebank.
+  - id: smoke
+    version: "1"
+    cases: all
+    perturbations: all
+    axes: ["ablation", "format"]
+    suts: ["fake-baseline"]
+    n_samples: 1
+
+  # Quick real-model inspection: Gemini 2.5 Flash, baseline only (10 units).
+  - id: gemini_smoke
+    version: "1"
+    cases: all
+    perturbations: all
+    axes: ["format"]
+    suts: ["gemini-2.5-flash"]
+    n_samples: 1
+
+  # Input contract on a REAL model: ablation on gemini-2.5-flash (40 units).
+  - id: gemini_contract
+    version: "1"
+    cases: all
+    perturbations: all
+    axes: ["ablation", "format"]
+    suts: ["gemini-2.5-flash"]
+    n_samples: 1
+
+  # Real model comparison across three generations: 2.5-flash vs 3.5-flash vs 3.7-flash.
+  - id: gemini_compare_all
+    version: "1"
+    cases: all
+    perturbations: all
+    axes: ["format"]
+    suts: ["gemini-2.5-flash", "gemini-3.5-flash", "gemini-3.7-flash"]
+    n_samples: 1

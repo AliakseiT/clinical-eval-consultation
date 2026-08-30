@@ -1,0 +1,57 @@
+{
+  "case_id": "CONSULT_005",
+  "elements": {
+    "initial_presentation": "68-year-old male brought by EMS with sudden onset left-sided facial droop, left arm and leg weakness, and slurred speech starting 75 minutes ago. NIHSS score: 14. Vitals: BP 168/94 mmHg, HR 82 bpm regular, RR 16/min, SpO2 97%.",
+    "patient_history": "History of non-valvular atrial fibrillation, hypertension, previous TIA 2 years ago. Medications: Apixaban 5mg BID (reports taking this morning), Lisinopril 20mg. NKDA.",
+    "investigation_attachments": "Non-contrast Head CT: No intracranial hemorrhage; early ischemic signs in right MCA territory with ASPECTS score 9. CT Angiography: Occlusion of proximal right M1 segment of middle cerebral artery."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Acute ischemic stroke",
+        "Right MCA territory stroke",
+        "ischemic cerebrovascular accident",
+        "large vessel occlusion"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Intracranial hemorrhage",
+        "Todd paralysis",
+        "Complex migraine",
+        "Hypoglycemia",
+        "Brain tumor"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Non-contrast head CT",
+        "CT angiography",
+        "MRI brain / DWI",
+        "point-of-care blood glucose",
+        "coagulation panel"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Mechanical thrombectomy evaluation",
+        "Stroke team activation",
+        "Blood pressure management",
+        "Caution/contraindication with IV thrombolysis due to recent DOAC",
+        "Neuro-ICU admission"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Time-critical window (<6h for thrombectomy)",
+        "neurological deterioration",
+        "airway assessment"
+      ],
+      "expected": true
+    }
+  }
+}

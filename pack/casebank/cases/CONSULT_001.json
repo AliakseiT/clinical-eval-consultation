@@ -1,0 +1,55 @@
+{
+  "case_id": "CONSULT_001",
+  "elements": {
+    "initial_presentation": "62-year-old male presents to ED with severe, crushing substernal chest pain radiating to the left arm and jaw for 90 minutes. Associated with diaphoresis, nausea, and shortness of breath. Vitals: BP 155/95 mmHg, HR 102 bpm, RR 22/min, SpO2 96% on room air.",
+    "patient_history": "History of hypertension, hyperlipidemia, 30 pack-year smoking. Medications: Amlodipine 5mg, Atorvastatin 20mg. No prior known CAD. NKDA.",
+    "investigation_attachments": "ECG: ST-segment elevation >2mm in leads II, III, and aVF with reciprocal ST depression in I and aVL (Inferior STEMI). Initial Troponin I: 4.8 ng/mL (elevated)."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "ST-Elevation Myocardial Infarction",
+        "STEMI",
+        "inferior STEMI",
+        "acute myocardial infarction"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Aortic dissection",
+        "Pulmonary embolism",
+        "Acute pericarditis",
+        "Gastroesophageal reflux"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Coronary angiography",
+        "serial troponins",
+        "echocardiogram",
+        "repeat ECG"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Aspirin",
+        "P2Y12 inhibitor",
+        "Heparin",
+        "PCI",
+        "reperfusion"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Immediate cardiac catheterization laboratory activation",
+        "door-to-balloon",
+        "cardiogenic shock monitoring"
+      ],
+      "expected": true
+    }
+  }
+}

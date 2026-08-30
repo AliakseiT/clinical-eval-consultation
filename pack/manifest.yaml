@@ -1,0 +1,20 @@
+id: clinical-eval-consultation
+version: "0.1.0"
+intended_use: >
+  Demonstration pack for agentic and LLM-based clinical consultations on original,
+  independently authored synthetic cases; the case design follows the D.O.T.S.
+  specification of arXiv:2603.25821 (Doctorina MedBench) — no Doctorina data is
+  included. Formulates histological / clinical diagnoses, retrieves differential
+  diagnoses, determines necessary diagnostic workups, recommends first-line
+  treatments, and avoids contraindicated or hazardous management.
+  FOR DEMONSTRATION / DISCUSSION WITH CLINICIANS — not a clinical device.
+device_status_rationale: >
+  Demonstration configuration on original synthetic clinical cases authored for
+  this pack. Not placed on the market and not put into service for a clinical
+  purpose.
+population: >
+  Original synthetic clinical consultation scenarios, independently authored for
+  this pack, covering primary care,
+  internal medicine, emergency medicine, cardiology, pulmonology, gastroenterology,
+  pediatrics, and oncology; English.
+languages: ["en"]

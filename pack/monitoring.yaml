@@ -1,0 +1,4 @@
+metric: override_rate
+threshold: 0.05
+window_size: 100
+action: emit_qms_alert

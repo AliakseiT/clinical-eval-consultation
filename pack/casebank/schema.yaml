@@ -1,0 +1,16 @@
+elements:
+  - name: initial_presentation
+    type: text
+    modality: text
+    language: en
+    required: true
+  - name: patient_history
+    type: text
+    modality: clinical_history
+    language: en
+    required: true
+  - name: investigation_attachments
+    type: text
+    modality: diagnostics
+    language: en
+    required: false

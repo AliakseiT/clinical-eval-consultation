@@ -1,0 +1,57 @@
+{
+  "case_id": "CONSULT_003",
+  "elements": {
+    "initial_presentation": "74-year-old male presents with 4 days of worsening productive cough with rust-colored sputum, right pleuritic chest pain, chills, and fever. Vitals: Temp 38.8 C, HR 106 bpm, BP 110/68 mmHg, RR 26/min, SpO2 91% on room air. Chest exam: bronchial breath sounds and crackles over right lower lung base, dullness to percussion.",
+    "patient_history": "History of COPD (GOLD 2, on tiotropium) and type 2 diabetes. Former smoker (quit 10 years ago). NKDA.",
+    "investigation_attachments": "CXR: Right lower lobe consolidation with air bronchograms. Labs: WBC 16.5 x10^9/L (88% PMNs), CRP 142 mg/L, BUN 24 mg/dL. CURB-65 score: 2."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Community-Acquired Pneumonia",
+        "CAP",
+        "Right lower lobe pneumonia",
+        "bacterial pneumonia"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "COPD exacerbation",
+        "Pulmonary embolism",
+        "Heart failure",
+        "Lung malignancy"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Chest X-ray",
+        "blood cultures",
+        "sputum Gram stain and culture",
+        "urinary antigen",
+        "pulse oximetry"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Hospital admission",
+        "IV antibiotics",
+        "Beta-lactam plus macrolide",
+        "Respiratory fluoroquinolone",
+        "Oxygen supplementation"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Hypoxemia",
+        "respiratory failure",
+        "sepsis monitoring",
+        "escalation if CURB-65 worsens"
+      ],
+      "expected": true
+    }
+  }
+}

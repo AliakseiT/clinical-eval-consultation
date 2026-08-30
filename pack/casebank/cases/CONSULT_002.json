@@ -1,0 +1,54 @@
+{
+  "case_id": "CONSULT_002",
+  "elements": {
+    "initial_presentation": "24-year-old female presents with 24 hours of abdominal pain that started periumbilically and migrated to the right lower quadrant (RLQ). Reports anorexia, low-grade fever, and 2 episodes of vomiting. Vitals: Temp 38.1 C, HR 98 bpm, BP 118/74 mmHg. Abdomen: focal RLQ tenderness at McBurneys point with positive Rovsing and rebound tenderness.",
+    "patient_history": "No significant past medical history. Last menstrual period 2 weeks ago (regular). Negative home urine pregnancy test. NKDA.",
+    "investigation_attachments": "Labs: WBC 14.8 x10^9/L with 82% neutrophils. Urine beta-hCG: negative. Bedside Ultrasound: non-compressible blind-ending tubular structure in RLQ measuring 8.5 mm with hyperemia (acute appendicitis)."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Acute appendicitis",
+        "appendicitis"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Ruptured ovarian cyst",
+        "Ectopic pregnancy",
+        "Mesenteric adenitis",
+        "Ovarian torsion",
+        "Gastroenteritis"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Surgical consultation",
+        "abdominal ultrasound",
+        "CT abdomen/pelvis if equivocal",
+        "urinalysis"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "NPO",
+        "IV fluids",
+        "IV antibiotics",
+        "Appendectomy",
+        "surgical resection"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Peritonitis",
+        "appendix perforation",
+        "urgent surgical evaluation"
+      ],
+      "expected": true
+    }
+  }
+}

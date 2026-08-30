@@ -1,0 +1,57 @@
+{
+  "case_id": "CONSULT_009",
+  "elements": {
+    "initial_presentation": "2-year-old male brought to urgent care at 11 PM by parents with sudden onset barking seal-like cough, hoarseness, and inspiratory stridor that began tonight following 2 days of mild rhinorrhea and low-grade fever. Vitals: Temp 38.0 C, HR 130 bpm, RR 34/min, SpO2 97% on room air. Westley Croup Score: 4 (moderate). Mild subcostal retractions present when agitated.",
+    "patient_history": "Born at full term. Vaccinations up to date. No prior episodes. No history of choking or foreign body ingestion. NKDA.",
+    "investigation_attachments": "Neck Soft Tissue X-Ray (AP view): Subglottic tracheal narrowing (classic \"steeple sign\"). No foreign body or epiglottic swelling noted."
+  },
+  "ground_truth": {
+    "item_diagnosis": {
+      "evidence": [
+        "Croup",
+        "Laryngotracheobronchitis",
+        "viral croup"
+      ],
+      "expected": true
+    },
+    "item_differential": {
+      "evidence": [
+        "Acute epiglottitis",
+        "Bacterial tracheitis",
+        "Foreign body aspiration",
+        "Peritonsillar abscess",
+        "Asthma"
+      ],
+      "expected": true
+    },
+    "item_investigations": {
+      "evidence": [
+        "Clinical assessment",
+        "Westley croup scoring",
+        "pulse oximetry",
+        "soft tissue neck X-ray if atypical",
+        "avoid distressing child"
+      ],
+      "expected": true
+    },
+    "item_treatment_safety": {
+      "evidence": [
+        "Oral or IM Dexamethasone",
+        "Nebulized epinephrine",
+        "cool mist / humidified air",
+        "calm environment"
+      ],
+      "expected": true
+    },
+    "item_red_flags": {
+      "evidence": [
+        "Stridor at rest",
+        "severe retractions",
+        "cyanosis",
+        "respiratory exhaustion",
+        "epiglottitis rule-out"
+      ],
+      "expected": true
+    }
+  }
+}
