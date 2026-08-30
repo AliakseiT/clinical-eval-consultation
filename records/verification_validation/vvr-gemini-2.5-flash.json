@@ -14,7 +14,7 @@
         "metric": "mean_score",
         "passed": true,
         "threshold": "mean_score_min",
-        "value": 1.0
+        "value": 0.9800000000000001
       }
     ]
   },
@@ -23,14 +23,14 @@
     "env_hash": "a9203a0f88ae880cb4fcbbc49141b948ffb98b2fdc1f1e5822c8c61a0435c4c8",
     "generated_by": "validrig 0.1.0",
     "model_version_note": "SUT and judge model_version are author-asserted. For a hosted endpoint that may update silently, pin a local model or record the provider's returned model id to keep this attestation trustworthy.",
-    "pinned_inputs_hash": "1386dfaca37b6a839c22125a45a57a7e2e998e0e45d82b35f6f1097eddfe7e4e",
+    "pinned_inputs_hash": "63eec9c7d2ca0c080cff0966608b0b7a80e3ac5041b6156c9c7c499160465b38",
     "pins": {
       "battery_id": "gemini_compare_all",
       "battery_version": "1",
       "engine_version": "0.1.0",
-      "judge_id": "fake-judge",
+      "judge_id": "geval-gemini-flash-lite",
       "judge_version": "1",
-      "pack_hash": "9bb1e2ca7fca7cf8760ee50f0026a090a69ff5db79914a068d8d0839e9d532e1",
+      "pack_hash": "58e1058bc0b4b9f154693c7efdf3b60a14b7362c07396a5c167383ee64ac3cd6",
       "pack_id": "clinical-eval-consultation",
       "pack_version": "0.1.0",
       "seed": 1,
@@ -39,8 +39,8 @@
     },
     "qms_baseline_repo": "AliakseiT/dearauditor-qms-baseline",
     "qms_baseline_tag": "QMS-2026-07-09-R005",
-    "rendered_at": "2026-08-30T16:47:57+00:00",
-    "run_id": "1386dfaca37b6a83"
+    "rendered_at": "2026-08-30T20:45:25+00:00",
+    "run_id": "63eec9c7d2ca0c08"
   },
   "contract": {
     "artifact_type": "input_contract",
@@ -81,9 +81,9 @@
       "battery_id": "gemini_compare_all",
       "battery_version": "1",
       "engine_version": "0.1.0",
-      "judge_id": "fake-judge",
+      "judge_id": "geval-gemini-flash-lite",
       "judge_version": "1",
-      "pack_hash": "9bb1e2ca7fca7cf8760ee50f0026a090a69ff5db79914a068d8d0839e9d532e1",
+      "pack_hash": "58e1058bc0b4b9f154693c7efdf3b60a14b7362c07396a5c167383ee64ac3cd6",
       "pack_id": "clinical-eval-consultation",
       "pack_version": "0.1.0",
       "seed": 1,
@@ -92,13 +92,13 @@
     },
     "schema_version": 1
   },
-  "generated_at": "2026-08-30T16:47:57+00:00",
+  "generated_at": "2026-08-30T20:45:25+00:00",
   "intended_use": "Demonstration pack for agentic and LLM-based clinical consultations on original, independently authored synthetic cases; the case design follows the D.O.T.S. specification of arXiv:2603.25821 (Doctorina MedBench) \u2014 no Doctorina data is included. Formulates histological / clinical diagnoses, retrieves differential diagnoses, determines necessary diagnostic workups, recommends first-line treatments, and avoids contraindicated or hazardous management. FOR DEMONSTRATION / DISCUSSION WITH CLINICIANS \u2014 not a clinical device.",
   "product_id": "clinical-eval-consultation",
   "product_version": "0.1.0",
   "qms_baseline_tag": "QMS-2026-07-09-R005",
   "record_type": "validation_dossier",
-  "run_id": "1386dfaca37b6a83",
+  "run_id": "63eec9c7d2ca0c08",
   "schema_version": 1,
   "signing": {
     "mechanism": "github_immutable_release (planned)",
@@ -132,7 +132,7 @@
       "linked_inputs": {
         "anomaly_records": [],
         "change_records": [],
-        "design_input_baseline_reference": "pack clinical-eval-consultation v0.1.0 (hash 9bb1e2ca7fca7cf8)",
+        "design_input_baseline_reference": "pack clinical-eval-consultation v0.1.0 (hash 58e1058bc0b4b9f1)",
         "design_traceability_reference": "",
         "requirements": [
           "item_diagnosis",
@@ -198,14 +198,14 @@
       "env_hash": "a9203a0f88ae880cb4fcbbc49141b948ffb98b2fdc1f1e5822c8c61a0435c4c8",
       "generated_by": "validrig 0.1.0",
       "model_version_note": "SUT and judge model_version are author-asserted. For a hosted endpoint that may update silently, pin a local model or record the provider's returned model id to keep this attestation trustworthy.",
-      "pinned_inputs_hash": "1386dfaca37b6a839c22125a45a57a7e2e998e0e45d82b35f6f1097eddfe7e4e",
+      "pinned_inputs_hash": "63eec9c7d2ca0c080cff0966608b0b7a80e3ac5041b6156c9c7c499160465b38",
       "pins": {
         "battery_id": "gemini_compare_all",
         "battery_version": "1",
         "engine_version": "0.1.0",
-        "judge_id": "fake-judge",
+        "judge_id": "geval-gemini-flash-lite",
         "judge_version": "1",
-        "pack_hash": "9bb1e2ca7fca7cf8760ee50f0026a090a69ff5db79914a068d8d0839e9d532e1",
+        "pack_hash": "58e1058bc0b4b9f154693c7efdf3b60a14b7362c07396a5c167383ee64ac3cd6",
         "pack_id": "clinical-eval-consultation",
         "pack_version": "0.1.0",
         "seed": 1,
@@ -214,8 +214,8 @@
       },
       "qms_baseline_repo": "AliakseiT/dearauditor-qms-baseline",
       "qms_baseline_tag": "QMS-2026-07-09-R005",
-      "rendered_at": "2026-08-30T16:47:57+00:00",
-      "run_id": "1386dfaca37b6a83"
+      "rendered_at": "2026-08-30T20:45:25+00:00",
+      "run_id": "63eec9c7d2ca0c08"
     },
     "calibration": {
       "status": "not_collected"
@@ -259,21 +259,26 @@
         },
         "mean_score": {
           "hi": 1.0,
-          "lo": 1.0,
-          "mean": 1.0,
+          "lo": 0.9400000000000001,
+          "mean": 0.9800000000000001,
           "n": 10
         },
         "n_units": 10
       }
     },
-    "deviations_and_open_issues": [],
+    "deviations_and_open_issues": [
+      {
+        "status": "fail",
+        "test_case_id": "item_investigations"
+      }
+    ],
     "generated_from_template": "records/verification_validation/vv_report_template.md",
     "metadata": {
       "execution_mode": "formal_release_candidate",
       "plan_reference": "VVP-clinical-eval-consultation-gemini_compare_all",
       "product_id": "clinical-eval-consultation",
-      "report_date": "2026-08-30T16:47:57+00:00",
-      "report_id": "VVR-clinical-eval-consultation-1386dfaca37b6a83",
+      "report_date": "2026-08-30T20:45:25+00:00",
+      "report_id": "VVR-clinical-eval-consultation-63eec9c7d2ca0c08",
       "target_revision": "0.1.0 / SUT gemini-2.5-flash (hash 0d2134aa001cd98e)"
     },
     "record_type": "verification_validation_report",
@@ -310,13 +315,13 @@
     "summary_of_results": {
       "blocked": 0,
       "condition": "baseline (intended input)",
-      "failed": 0,
+      "failed": 1,
       "not_run": 0,
-      "passed": 5,
+      "passed": 4,
       "per_test_case": {
         "item_diagnosis": "pass",
         "item_differential": "pass",
-        "item_investigations": "pass",
+        "item_investigations": "fail",
         "item_red_flags": "pass",
         "item_treatment_safety": "pass"
       },

@@ -36,7 +36,7 @@ GEMINI_API_KEY=... python run_gemini_eval.py
 GEMINI_API_KEY=... python run_gemini_contract.py
 ```
 
-The engine is being renamed from `harness` to `validrig` (CLI `rig`); the Python helper scripts still import the `harness` package until that rename lands.
+The judge is declared in `pack/judge.yaml`, not constructed by the scripts: the `smoke` battery selects the offline fake judge, every Gemini battery uses the pinned `gemini-flash-lite-latest` G-Eval judge. So the `judge_id` a run pins is the judge that actually graded it, and swapping the judge changes `pack_hash` → `run_id` — a revalidation event by construction. The helper scripts only orchestrate batteries and load `GEMINI_API_KEY` (env-var name only; no key is ever stored in the pack).
 
 ## Runs & records
 

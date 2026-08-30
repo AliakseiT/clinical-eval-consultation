@@ -22,11 +22,11 @@ data_note: >-
 
 diffs:
   gen25_to_35:
-    baseline: 1386dfaca37b6a83 # gemini-2.5-flash, gemini_compare_all battery
-    candidate: 1f613db2e28eafbb # gemini-3.5-flash, same pinned inputs
+    baseline: 63eec9c7d2ca0c08 # gemini-2.5-flash, gemini_compare_all battery
+    candidate: a8ccc6fac866e8d3 # gemini-3.5-flash, same pinned inputs
   gen35_to_37:
-    baseline: 1f613db2e28eafbb
-    candidate: 5cd97b4b81faca6b # gemini-3.7-flash
+    baseline: a8ccc6fac866e8d3
+    candidate: 84ef279cb7a91160 # gemini-3.7-flash
 
 arc:
   task: |
@@ -45,10 +45,10 @@ arc:
     <p>Three Gemini generations were run side by side on the same pinned inputs, so the pipeline answers a concrete question: <strong>did the new model get better or worse on your cases?</strong></p>
 
   findings: |
-    <p><strong>The rig failed this workflow — and that is the finding.</strong> On the contract battery's baseline condition (the intended, unperturbed inputs), {{run.8072d585d024ae22.sut}} missed critical findings in {{run.8072d585d024ae22.acceptance.critical_omission_rate.value|.1%}} of graded checks. The pre-registered limit is {{run.8072d585d024ae22.acceptance.critical_omission_rate.limit|.0%}}. Verdict: <strong>{{run.8072d585d024ae22.acceptance.critical_omission_rate.result}}</strong> — even though the same run's mean quality score, {{run.8072d585d024ae22.acceptance.mean_score.value|.2f}}, comfortably cleared its own threshold of {{run.8072d585d024ae22.acceptance.mean_score.limit|.2f}}. Across the full perturbation grid (inputs withheld or degraded), the critical omission rate rose to {{run.8072d585d024ae22.critical_omission_rate|.0%}}.</p>
+    <p><strong>The rig failed this workflow — and that is the finding.</strong> On the contract battery's baseline condition (the intended, unperturbed inputs), {{run.ac16501e75930ce7.sut}} missed critical findings in {{run.ac16501e75930ce7.acceptance.critical_omission_rate.value|.1%}} of graded checks. The pre-registered limit is {{run.ac16501e75930ce7.acceptance.critical_omission_rate.limit|.0%}}. Verdict: <strong>{{run.ac16501e75930ce7.acceptance.critical_omission_rate.result}}</strong> — even though the same run's mean quality score, {{run.ac16501e75930ce7.acceptance.mean_score.value|.2f}}, comfortably cleared its own threshold of {{run.ac16501e75930ce7.acceptance.mean_score.limit|.2f}}. Across the full perturbation grid (inputs withheld or degraded), the critical omission rate rose to {{run.ac16501e75930ce7.critical_omission_rate|.0%}}.</p>
     <p>That combination is the whole story: a model can look good on average and still be unsafe at the edges. A validation pipeline that cannot say FAIL is marketing; this one just did.</p>
-    <p><strong>Model comparison:</strong> on the pinned head-to-head comparison battery, all three Gemini generations scored {{run.1386dfaca37b6a83.mean_score|.3f}} ({{run.1386dfaca37b6a83.sut}}), {{run.1f613db2e28eafbb.mean_score|.3f}} ({{run.1f613db2e28eafbb.sut}}), and {{run.5cd97b4b81faca6b.mean_score|.3f}} ({{run.5cd97b4b81faca6b.sut}}) — every acceptance gate PASSED, with a mean score delta of {{diff.gen25_to_35.delta|.2f}} and {{diff.gen35_to_37.delta|.2f}} across the two version steps.</p>
+    <p><strong>Model comparison:</strong> on the pinned head-to-head comparison battery, all three Gemini generations scored {{run.63eec9c7d2ca0c08.mean_score|.3f}} ({{run.63eec9c7d2ca0c08.sut}}), {{run.a8ccc6fac866e8d3.mean_score|.3f}} ({{run.a8ccc6fac866e8d3.sut}}), and {{run.84ef279cb7a91160.mean_score|.3f}} ({{run.84ef279cb7a91160.sut}}) — every acceptance gate PASSED, with a mean score delta of {{diff.gen25_to_35.delta|.2f}} and {{diff.gen35_to_37.delta|.2f}} across the two version steps.</p>
 
   meaning: |
-    <p>Triage AI is exactly where "it seemed fine in the demo" is not a safety argument. This workflow looked flawless on the head-to-head comparison — and still crossed a pre-registered safety line on critical omissions, on clean inputs, with the miss rate rising further once inputs were degraded. A validation pipeline gives a telemedicine provider that answer as a standing capability: on which cases does it fail, under what conditions, and did the last update change that?</p>
+    <p>Triage AI is exactly where "it seemed fine in the demo" is not a safety argument. This workflow cleared every gate on the head-to-head comparison — and still crossed a pre-registered safety line on critical omissions, on clean inputs, with the miss rate rising further once inputs were degraded. A validation pipeline gives a telemedicine provider that answer as a standing capability: on which cases does it fail, under what conditions, and did the last update change that?</p>
     <p>Because the case bank is synthetic and original, the whole pipeline — cases, rubric, judge prompts — can be published and inspected without touching patient data.</p>
