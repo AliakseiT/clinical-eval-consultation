@@ -179,8 +179,11 @@ def main():
 
         adj = {
             "case_id": cid,
-            "adjudicated_by": "MD-Reviewer-Team",
-            "adjudicated_at": "2026-08-20",
+            # No clinician adjudication has taken place. The expected values
+            # below are the case author's own rubric expectations, set when the
+            # cases were authored (2026-08-30) — not an independent review.
+            "adjudicated_by": "unadjudicated",
+            "adjudicated_at": "2026-08-30",
             "values": {
                 "item_diagnosis": 1.0,
                 "item_differential": 1.0,

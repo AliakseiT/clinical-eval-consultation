@@ -1,7 +1,7 @@
 {
   "case_id": "CONSULT_010",
-  "adjudicated_by": "MD-Reviewer-Team",
-  "adjudicated_at": "2026-08-20",
+  "adjudicated_by": "unadjudicated",
+  "adjudicated_at": "2026-08-30",
   "values": {
     "item_diagnosis": 1.0,
     "item_differential": 1.0,
