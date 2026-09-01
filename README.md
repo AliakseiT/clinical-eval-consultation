@@ -41,3 +41,16 @@ The judge is declared in `pack/judge.yaml`, not constructed by the scripts: the 
 ## Runs & records
 
 Run outputs (`runs/`) are immutable, content-hash-pinned artifacts. Historic runs and promoted V&V records produced before the 2026-08-30 relabel (when this pack was labeled "MedBench") embed the old case ids and were deliberately **not** carried into this repository; they remain in the superseded `clinical-eval-medbench` repo and will be regenerated under the new labels. `runs/` is gitignored here.
+
+## Licensing
+
+- **Code** (`ingest_consultation.py`, run scripts, and everything not listed
+  below): **AGPL-3.0-or-later**, same license as the
+  [validrig](https://github.com/AliakseiT/validrig) engine — full text in
+  [`LICENSE`](LICENSE).
+- **Pack content** (cases, rubric, adjudication expectations, authored pack
+  prose): **CC BY 4.0** — fully original work, no third-party data; notice and
+  covered files in [`LICENSE-CONTENT`](LICENSE-CONTENT).
+
+License files live outside the parsed pack model, so adding or editing them
+does not change the `pack_hash` or invalidate pinned runs.

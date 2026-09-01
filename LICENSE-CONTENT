@@ -1,0 +1,41 @@
+Content licence for the pack content
+====================================
+
+This notice covers the authored PACK CONTENT in this repository, as distinct
+from its code (which is licensed under the GNU Affero General Public License
+v3.0 or later — see the LICENSE file).
+
+Covered content
+---------------
+
+    pack/casebank/cases/*.json          (the 10 synthetic consultation cases)
+    pack/rubric/rubric.yaml             (the grading rubric)
+    pack/rubric/adjudication/*.json     (the author-set rubric expectations)
+    pack/*.yaml                         (authored pack prose and configuration)
+    README.md and other authored prose
+
+This is fully original work: the cases are original, independently authored
+synthetic consultations (no third-party data is included; the design follows
+the published D.O.T.S. specification of arXiv:2603.25821, cited as design
+provenance only).
+
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+-------------------------------------------------------------------
+
+The covered content is licensed under the Creative Commons Attribution 4.0
+International License. You are free to share and adapt it for any purpose,
+including commercially, provided you give appropriate credit, link to the
+license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+Suggested attribution: "clinical-eval-consultation pack, DearAuditor
+(https://github.com/AliakseiT/clinical-eval-consultation), licensed under
+CC BY 4.0."
+
+The repository's code — `ingest_consultation.py` (including the case text it
+embeds as source), the run scripts, and anything else not listed above — is
+covered by the LICENSE file (AGPL-3.0-or-later). Where a case file is
+regenerated from the ingest script, the generated JSON is offered under
+CC BY 4.0 as stated here.
