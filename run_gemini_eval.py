@@ -39,7 +39,6 @@ def _load_env():
         Path.cwd() / ".env",
         ROOT / ".env",
         Path.home() / ".env",
-        Path.home() / ".env",
     ]
     for cand in candidates:
         if cand.exists():
